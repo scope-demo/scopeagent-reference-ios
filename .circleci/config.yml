@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    macos:
+      xcode: "10.2.1"
+    steps:
+      - checkout
+      - run:
+          name: Pre-start simulator
+          command: xcrun instruments -w "iPhone X (12.2) [" || true
+      - run:
+          name: Fix CIRCLE_WORKING_DIRECTORY
+          command: echo 'CIRCLE_WORKING_DIRECTORY="${CIRCLE_WORKING_DIRECTORY/#\~/$HOME}"' >> $BASH_ENV
+      - run:
+          name: Run tests
+          command: xcodebuild -workspace ScopeAgent-Reference.xcworkspace -scheme ScopeAgent-Reference -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=12.2' SYMROOT=$(PWD)/build test
