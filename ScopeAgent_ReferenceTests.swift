@@ -147,10 +147,19 @@ class ScopeAgent_ReferenceTests: XCTestCase {
     
     /**
      * SCOPE
-     * This test shows how log integration in the app shows in Scope results
+     * This test shows how custom log integration in the app shows in Scope results
      */
-    func testLoggingIntegration() {
+    func testCustomLoggingIntegration() {
         AssistantManager.shared.sensors.logStatus()
+        XCTAssert(true)
+    }
+    
+    /**
+     * SCOPE
+     * This test shows how NSLog, os_log or print messages shows in Scope results without code changes
+     */
+    func testStandardLogging() {
+        AssistantManager.shared.checkStandardLoggging()
         XCTAssert(true)
     }
 

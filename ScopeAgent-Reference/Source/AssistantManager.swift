@@ -13,6 +13,7 @@
  */
 
 import Foundation
+import os
 
 class AssistantManager {
     
@@ -60,6 +61,12 @@ class AssistantManager {
         }
         Logger.logInfo("Camera OK")
         return true;
+    }
+    
+    func checkStandardLoggging() {
+        NSLog("Message logged with NSLog(). It uses stderr stream")
+        print("Message logged with print(). It uses stdout stream")
+        os_log("Message logged with os_log(). It uses stderr stream")
     }
 }
 

@@ -8,7 +8,7 @@
 /**
  * SCOPE
  *
- * This class represents a custom Logger class of the application, all the app uses this interface for logging information
+ * This class represents a custom logging class for the application, all the app uses this interface for logging information
  * ScopeAgent is imported here to integrate the logs of the app to the results that Scope provides.
  * We must add some some code to original class to make it possible
  *
