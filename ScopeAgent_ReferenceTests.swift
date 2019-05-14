@@ -49,8 +49,17 @@ class ScopeAgent_ReferenceTests: XCTestCase {
      * This test shows how Scope captures networking activity initiated with Alamofire without neededing any custom code
      */
     func testNetworkingAlamofire() {
-        Networking.alamofireExample()
-        XCTAssert(true)
+        let expec = expectation(description: "testNetworkingAlamofire")
+        
+        Networking.alamofireExample{
+            expec.fulfill()
+        }
+        
+        waitForExpectations(timeout: 30) { error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
+        }
     }
     
     /**
@@ -58,8 +67,17 @@ class ScopeAgent_ReferenceTests: XCTestCase {
      * This test shows how Scope captures networking activity initiated with default URLSession without neededing any custom code
      */
     func testNetworkingURLSession() {
-        Networking.urlSessionExample()
-        XCTAssert(true)
+        let expec = expectation(description: "testNetworkingAlamofire")
+
+        Networking.urlSessionExample{
+            expec.fulfill()
+        }
+        
+        waitForExpectations(timeout: 30) { error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
+        }
     }
     
     /**
@@ -147,10 +165,19 @@ class ScopeAgent_ReferenceTests: XCTestCase {
     
     /**
      * SCOPE
-     * This test shows how log integration in the app shows in Scope results
+     * This test shows how custom log integration in the app shows in Scope results
      */
-    func testLoggingIntegration() {
+    func testCustomLoggingIntegration() {
         AssistantManager.shared.sensors.logStatus()
+        XCTAssert(true)
+    }
+    
+    /**
+     * SCOPE
+     * This test shows how NSLog, os_log or print messages shows in Scope results without code changes
+     */
+    func testStandardLogging() {
+        AssistantManager.shared.checkStandardLoggging()
         XCTAssert(true)
     }
 

@@ -17,22 +17,24 @@ import Alamofire
 
 class Networking {
     
-    class func alamofireExample() {
+    class func alamofireExample(callback:@escaping ()->Void) {
         
         let url = URL(string: "http://httpbin.org/get")!
         Alamofire.request(url, parameters: ["foo": "bar"])
             .response { response in
                 print(response)
+                callback()
         }
     }
 
-    class func urlSessionExample() {
+    class func urlSessionExample(callback:@escaping ()->Void) {
         
         let url = URL(string: "http://httpbin.org/ip")!
         let task = URLSession.shared.dataTask(with: url) { data,response,error  in
             if let data = data,
                 let response = String(data: data, encoding: .utf8) {
                     print( response )
+                    callback()
             }
         }
         task.resume()
