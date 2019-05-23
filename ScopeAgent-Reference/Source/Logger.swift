@@ -21,7 +21,7 @@ import ScopeAgent
 class Logger {
     
     class func logDebug(_ text: String, filename: String = #file, line: Int = #line, fields: [String : Any]? = nil) {
-        print("🔘 - \(text)")
+        print("DEBUG - \((filename as NSString).lastPathComponent):\(line) - \(text)")
         
         /* SCOPE
          * We must add the following line to integrate logs with Scope
@@ -32,7 +32,7 @@ class Logger {
     
     
     class func logInfo(_ text: String, filename: String = #file, line: Int = #line, fields: [String : Any]? = nil) {
-        print("ℹ️ - \(text)")
+        print("INFO - \((filename as NSString).lastPathComponent):\(line) - \(text)")
         
         /* SCOPE
         * We must add the following line to integrate logs with Scope
@@ -42,7 +42,7 @@ class Logger {
     }
     
     class func logWarning(_ text: String, filename: String = #file, line: Int = #line, fields: [String : Any]? = nil) {
-        print("☢️ - \(text)")
+        print("WARNING - \((filename as NSString).lastPathComponent):\(line) - \(text)")
         
         /* SCOPE
          * We must add the following line to integrate logs with Scope
@@ -52,7 +52,7 @@ class Logger {
     }
     
     class func logError(_ text: String, filename: String = #file, line: Int = #line, fields: [String : Any]? = nil) {
-        print("🆘 - \(text)")
+        print("ERROR - \((filename as NSString).lastPathComponent):\(line) - \(text)")
     
         /* SCOPE
          * We must add the following line to integrate logs with Scope

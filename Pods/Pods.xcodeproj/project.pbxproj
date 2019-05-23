@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -16,7 +16,6 @@
 				AC79E374687D44357CD2BADC15A0A3D3 /* PBXTargetDependency */,
 			);
 			name = ScopeAgent;
-			productName = ScopeAgent;
 		};
 /* End PBXAggregateTarget section */
 
@@ -132,7 +131,7 @@
 		67398DD2216B5F7F50E5FCCA353C279F /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
 		6A003DABC1E8CF8F004050D50F6CF312 /* OTReference.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OTReference.h; path = Pod/Classes/OTReference.h; sourceTree = "<group>"; };
 		6C4083266A95D23EEF4AEAB80F8B082A /* Pods-ScopeAgent-Reference.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ScopeAgent-Reference.debug.xcconfig"; sourceTree = "<group>"; };
-		6F47093304DEF269135A601CE7836850 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F47093304DEF269135A601CE7836850 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		700ADD51317FC73E48C7F96159E94E9C /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		7202BAD9612B1D8EE74BA8F40D00E5F0 /* Pods-ScopeAgent-ReferenceTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ScopeAgent-ReferenceTests.modulemap"; sourceTree = "<group>"; };
 		72300441B0112D5DFFBB712F414C0B04 /* OpenTracing-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "OpenTracing-Bridging-Header.h"; path = "Pod/Classes/OpenTracing-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -141,11 +140,11 @@
 		7C59C5DA3975DE1DF3DF3E96F76E8C05 /* OTReference.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OTReference.m; path = Pod/Classes/OTReference.m; sourceTree = "<group>"; };
 		7C9C58F48D567FD86FD9DBDC955CDAAB /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		81EDE58C92D2C50FFEF193FADA1D851C /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
-		883F093BCC05F2B4F7E2F7C4BF683E7B /* Pods_ScopeAgent_ReferenceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScopeAgent_ReferenceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		883F093BCC05F2B4F7E2F7C4BF683E7B /* Pods_ScopeAgent_ReferenceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ScopeAgent_ReferenceTests.framework; path = "Pods-ScopeAgent-ReferenceTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C9104D22D6CA70271947960F8685E67 /* ScopeAgent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ScopeAgent.framework; sourceTree = "<group>"; };
 		8EFC6A3461EF5F3E56DAE933D899E391 /* OTTracer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OTTracer.h; path = Pod/Classes/OTTracer.h; sourceTree = "<group>"; };
-		9077939DA1B82B76A84CB5C6531AFEB3 /* opentracing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = opentracing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9077939DA1B82B76A84CB5C6531AFEB3 /* opentracing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = opentracing.framework; path = opentracing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EBA12FA55F74A1DA861B9B857289088 /* opentracing-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "opentracing-Info.plist"; sourceTree = "<group>"; };
 		AB9E6644FFB25E9CF5D8BFAA4838E52E /* Alamofire-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Alamofire-Info.plist"; sourceTree = "<group>"; };
 		ABA75C26CA582532270BA8FEB2D39207 /* Pods-ScopeAgent-Reference.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ScopeAgent-Reference.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,7 +166,7 @@
 		E7D423C00A000E6BE413E59AE6A0C5AB /* Pods-ScopeAgent-ReferenceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ScopeAgent-ReferenceTests.release.xcconfig"; sourceTree = "<group>"; };
 		EC6B2674005D3426F969D54A49FDF7C0 /* Pods-ScopeAgent-Reference-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ScopeAgent-Reference-Info.plist"; sourceTree = "<group>"; };
 		EE91F27701C65BCA309499BB95258AB2 /* OTSpan.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OTSpan.h; path = Pod/Classes/OTSpan.h; sourceTree = "<group>"; };
-		F41116CAC1233478855542A89A6B925D /* Pods_ScopeAgent_Reference.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScopeAgent_Reference.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F41116CAC1233478855542A89A6B925D /* Pods_ScopeAgent_Reference.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ScopeAgent_Reference.framework; path = "Pods-ScopeAgent-Reference.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEFCB883A0A6E85800B025DBEF7FEC39 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -229,6 +228,7 @@
 				32EC5783094DDE7639D4AACBC9E51024 /* Validation.swift */,
 				9E9E82512DD37D61025DEA6464745CB2 /* Support Files */,
 			);
+			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -265,6 +265,7 @@
 				359F6CEC5A54A0A1BAFB1E99FE9B1DDB /* Frameworks */,
 				5923A34765C9A5F21934885CFD85FF79 /* Support Files */,
 			);
+			name = ScopeAgent;
 			path = ScopeAgent;
 			sourceTree = "<group>";
 		};
@@ -346,6 +347,7 @@
 				CCF5ABBD967D3C8D97E51C1CD5014DAA /* OTVersion.h */,
 				A0CCE839FA927E816CA787C821E14444 /* Support Files */,
 			);
+			name = opentracing;
 			path = opentracing;
 			sourceTree = "<group>";
 		};
@@ -525,15 +527,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = en;
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = EABBC615FC432296B9C1F557E765B1E5 /* Products */;
@@ -674,7 +675,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -752,7 +752,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-ScopeAgent-Reference/Pods-ScopeAgent-Reference-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ScopeAgent-Reference/Pods-ScopeAgent-Reference.modulemap";
 				OTHER_LDFLAGS = "";
@@ -776,7 +780,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -800,7 +807,11 @@
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
 				PRODUCT_NAME = Alamofire;
@@ -831,7 +842,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-ScopeAgent-Reference/Pods-ScopeAgent-Reference-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ScopeAgent-Reference/Pods-ScopeAgent-Reference.modulemap";
 				OTHER_LDFLAGS = "";
@@ -864,7 +879,11 @@
 				INFOPLIST_FILE = "Target Support Files/opentracing/opentracing-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/opentracing/opentracing.modulemap";
 				PRODUCT_MODULE_NAME = opentracing;
 				PRODUCT_NAME = opentracing;
@@ -885,7 +904,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -908,7 +930,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-ScopeAgent-ReferenceTests/Pods-ScopeAgent-ReferenceTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ScopeAgent-ReferenceTests/Pods-ScopeAgent-ReferenceTests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -941,7 +967,11 @@
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				PRODUCT_MODULE_NAME = Alamofire;
 				PRODUCT_NAME = Alamofire;
@@ -960,7 +990,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1010,7 +1039,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -1033,7 +1063,11 @@
 				INFOPLIST_FILE = "Target Support Files/opentracing/opentracing-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/opentracing/opentracing.modulemap";
 				PRODUCT_MODULE_NAME = opentracing;
 				PRODUCT_NAME = opentracing;
@@ -1065,7 +1099,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-ScopeAgent-ReferenceTests/Pods-ScopeAgent-ReferenceTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-ScopeAgent-ReferenceTests/Pods-ScopeAgent-ReferenceTests.modulemap";
 				OTHER_LDFLAGS = "";
