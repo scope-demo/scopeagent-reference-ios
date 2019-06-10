@@ -11,37 +11,37 @@ It is configured as explained in [https://scope.undefinedlabs.com/docs/ios-insta
 > ScopeAgent-Reference is written in Swift but ScopeAgent.framework can also be used from any project written in Objective-C.
 >
 
-It shows standard logging messages using`NSLog()`, `os_log()` or `print()` but it also implements custom logging integration in the app. See `Logger.swift` for details
+The project uses standard logging mechanisms like `NSLog()`, `os_log()` or `print()` (which will show up in Scope), but it also implements custom logging integration in the app. See `Logger.swift` for details.
 
-It shows automatic integration of networking requests in `Networking.swift` without any changes and also shows how to add instrumentation to your own Services  to show services integration in `Geolocation.swift`
+It shows automatic logging of networking requests in `Networking.swift` without any changes, and also how to add instrumentation to outgoing requests for integration tests to show tracing information from other services in `Geolocation.swift`
 
-There are comments in source files to explain what changes are for Scope to work, these changes are marked with  `/* SCOPE */` comments.
+There are comments in source files to explain what changes are for Scope to work. These changes are marked with  `/* SCOPE */` comments.
 
 #### Available Unit Tests
 
 In `ScopeAgent_ReferenceTests.swift` there are a variety of tests that show the different outputs that Scope produces with each one. 
 
-Unit test or simple networking test need no custom code, these tests have no Opentracing neither ScopeAgent dependency, they just show in Scope with their results automatically:
+Unit tests or simple networking tests need no custom code, they just show in Scope with their results automatically:
 
 - `testPass`: Simple example of a passing test
 - `testFail`: Example of a failing test
-- `testStandardLogging`: Shows how NSLog, os_log or print messages appear in Scope results
-- `testNetworkingAlamofire`: Alamofire request
+- `testStandardLogging`: Shows how `NSLog`, `os_log` or `print` messages appear in Scope results
+- `testNetworkingAlamofire`: Alamofire request
 - `testNetworkingURLSession`: Simple shared URLSession request
 - `testNSException`: A test that throws an exception, so it fails
 - `testCrash`: A test that produces a crash
 
-Some code can use a custom Logging framework, you can also integrate this custom logs in Scope:
+Custom logging frameworks are also supported:
 
-- `testCustomLoggingIntegration`: Example of custom logs, the integration implementation example is in `Logger.swift`
+- `testCustomLoggingIntegration`: Example of custom logs. The integration implementation is in `Logger.swift`
 
 Integration test need some custom code so we can trace all the execution that happens since we start the request until we get a response, including all the services that the request access for the test:
 
-- `testServicesIntegrationWithAlamofire`: Shows how to adapt integration test using Alamofire and a helper class `AlamofireTracing` written for this purpose in the app.
-- `testServicesIntegrationWithURLSession`: Shows how to adapt integration test using URLSession and helper class `SAURLSessionObserver` in ScopeAgent framework.
-- `testErrorInService`: Shows how an integration test thet produces an error in the service is accessing so we can check how the service error is shown in Scope.
+- `testServicesIntegrationWithAlamofire`: Shows how to adapt an integration test using Alamofire with the helper class `AlamofireTracing` written for this purpose
+- `testServicesIntegrationWithURLSession`: Shows how to adapt an integration test using URLSession and the helper class `SAURLSessionObserver` in the ScopeAgent framework.
+- `testErrorInService`: Shows an integration test that produces an error in an external service.
 
-It also supports standard trecing using Opentracing, Scope catches these traces and integrate them with the traces generated in testing. It can also be useful to add them to enrich your own tests and results:
+The agent also supports custom tracing using the OpenTracing API:
 
-- `testCustomOpentracing`: Shows a test that uses traces from standard opentracing
+- `testCustomOpentracing`: Shows a test that creates spans and events using the OpenTracing API
 
