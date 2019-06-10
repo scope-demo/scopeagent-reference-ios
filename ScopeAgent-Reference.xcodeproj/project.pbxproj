@@ -97,7 +97,6 @@
 				6624DB07228942F1005897D4 /* ScopeAgent-Reference */,
 				6624DB1C228942F3005897D4 /* ScopeAgent-ReferenceTests */,
 				6624DB06228942F1005897D4 /* Products */,
-				6624DB1D228942F3005897D4 /* ScopeAgent_ReferenceTests.swift */,
 				12CB4EF73D4809E8F9F65CFF /* Pods */,
 				EFB338A87269484E8AF77FDD /* Frameworks */,
 			);
@@ -130,6 +129,7 @@
 		6624DB1C228942F3005897D4 /* ScopeAgent-ReferenceTests */ = {
 			isa = PBXGroup;
 			children = (
+				6624DB1D228942F3005897D4 /* ScopeAgent_ReferenceTests.swift */,
 				6624DB1F228942F3005897D4 /* Info.plist */,
 			);
 			path = "ScopeAgent-ReferenceTests";
