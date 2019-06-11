@@ -22,7 +22,10 @@ class Networking {
         let url = URL(string: "http://httpbin.org/get")!
         Alamofire.request(url, parameters: ["foo": "bar"])
             .response { response in
-                print(response)
+                if let data = response.data,
+                    let string = String(data: data, encoding: .utf8) {
+                    print(string)
+                }
                 callback()
         }
     }

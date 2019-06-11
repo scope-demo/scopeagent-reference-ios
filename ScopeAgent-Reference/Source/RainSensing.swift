@@ -58,7 +58,7 @@ class Wipers {
             span.finish()
         }
         /*SCOPE*/
-        Logger.logDebug("wiping right")
+        print("wiping right")
         usleep(250_000)
     }
     
@@ -72,7 +72,7 @@ class Wipers {
             span.finish()
         }
         /*SCOPE*/
-        Logger.logDebug("wiping left")
+        print("wiping left")
         usleep(250_000)
     }
 }
@@ -98,7 +98,7 @@ class RainSensing {
         }
         /*SCOPE*/
 
-        Logger.logDebug("rain detected")
+        print("rain detected")
         Wipers.shared.activate()
     }
 }

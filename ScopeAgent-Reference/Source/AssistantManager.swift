@@ -59,7 +59,7 @@ class AssistantManager {
             NSException.init(name: NSExceptionName.init("CameraMalfunction"), reason: "cameraAxis position", userInfo: ["angle": "0.124 degress"]).raise();
             return false;
         }
-        Logger.logInfo("Camera OK")
+        print("Camera OK")
         return true;
     }
     
