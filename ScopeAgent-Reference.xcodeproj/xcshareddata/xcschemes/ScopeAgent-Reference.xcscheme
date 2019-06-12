@@ -61,32 +61,37 @@
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "SCOPE_COMMIT_SHA"
-            value = "$(CIRCLE_SHA1)"
+            value = "$(GIT_COMMIT)"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "SCOPE_REPOSITORY"
-            value = "$(CIRCLE_REPOSITORY_URL)"
+            value = "$(GIT_URL)"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "SCOPE_SOURCE_ROOT"
-            value = "$(CIRCLE_WORKING_DIRECTORY)"
+            value = "$(WORKSPACE)"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
-            key = "CIRCLECI"
-            value = "$(CIRCLECI)"
+            key = "JENKINS_URL"
+            value = "$(JENKINS_URL)"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
-            key = "CIRCLE_BUILD_NUM"
-            value = "$(CIRCLE_BUILD_NUM)"
+            key = "BUILD_ID"
+            value = "$(BUILD_ID)"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
-            key = "CIRCLE_BUILD_URL"
-            value = "$(CIRCLE_BUILD_URL)"
+            key = "BUILD_NUMBER"
+            value = "$(BUILD_NUMBER)"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "BUILD_URL"
+            value = "$(BUILD_URL)"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
