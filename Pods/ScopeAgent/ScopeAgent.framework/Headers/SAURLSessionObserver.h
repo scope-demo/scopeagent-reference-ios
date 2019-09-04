@@ -3,7 +3,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SAURLSessionObserver : NSURLProtocol<NSURLSessionDelegate>
+@interface SAURLSessionObserver : NSURLProtocol
 
 +(NSURLSessionConfiguration*) defaultSessionConfiguration;
 +(NSURLRequest*)adapt:(NSURLRequest*)urlRequest;

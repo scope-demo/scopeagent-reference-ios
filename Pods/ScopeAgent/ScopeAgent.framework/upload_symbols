@@ -1,10 +1,26 @@
 #!/bin/sh
 
-if [ -z "${SCOPE_APIKEY}" ] || [ -z "${SCOPE_API_ENDPOINT}" ]; then
-  echo "No \$SCOPE_APIKEY or \$SCOPE_API_ENDPOINT detected - skipping symbol file upload to Scope"
-  exit 0
+apikey="${SCOPE_APIKEY}"
+if [ -z "${apikey}" ]; then
+  apikey="${SCOPE_XCODE_APIKEY}"
+  if [ -z "${apikey}" ]; then
+    echo "No \$SCOPE_APIKEY or \$SCOPE_XCODE_APIKEY detected - skipping symbol file upload to Scope"
+    exit 0
+  fi
 fi
-searchdir=${BUILD_DIR}
+
+echo "APIKEY = ${apikey}"
+
+apiendpoint="${SCOPE_API_ENDPOINT}"
+if [ -z "${apiendpoint}" ]; then
+  apiendpoint="${SCOPE_XCODE_API_ENDPOINT}"
+  if [ -z "${apiendpoint}"  ]; then
+    echo "No \$SCOPE_API_ENDPOINT or \$SCOPE_XCODE_API_ENDPOINT detected - skipping symbol file upload to Scope"
+    exit 0
+  fi
+fi
+
+searchdir=${TARGET_BUILD_DIR}
 
 if [ -z "$(find ${searchdir} -name '*.dSYM')" ]; then
   echo "No .dSYM files found in ${searchdir} - skipping symbol file upload to Scope"
@@ -15,12 +31,12 @@ tmpdir=$(mktemp -d)
 tmpfile="${tmpdir}/symbols.zip"
 find ${searchdir} -name "*.dSYM" | zip -q -@ -r ${tmpfile}
 
-echo "Uploading .dSYM files to ${SCOPE_API_ENDPOINT}"
-curl -Ssf --retry 4 --retry-delay 5 -F "file=@${tmpfile};type=application/zip" -H "X-Scope-ApiKey: ${SCOPE_APIKEY}" ${SCOPE_API_ENDPOINT}/api/agent/upload
+echo "Uploading .dSYM files to ${apiendpoint}"
+curl -Ssf --retry 4 --retry-delay 5 -F "file=@${tmpfile};type=application/zip" -H "X-Scope-ApiKey: ${apikey}" ${apiendpoint}/api/agent/upload
 if [ $? != 0 ]; then
-  echo "Something failed when uploading .dSYM files to ${SCOPE_API_ENDPOINT}"
+  echo "Something failed when uploading .dSYM files to ${apiendpoint}"
 else
-  echo "Symbol files successfully uploaded to ${SCOPE_API_ENDPOINT}"
+  echo "Symbol files successfully uploaded to ${apiendpoint}"
 fi
 
 rm -r ${tmpdir}
