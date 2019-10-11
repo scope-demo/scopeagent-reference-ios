@@ -9,7 +9,7 @@
  * SCOPE
  *
  * Networking class show how Scope is able to integrate with networking calls without adding any code, just by being linked to your test target
- * ScopeAgent is not imported here but requests  will apear in Scope
+ * ScopeAgent is not imported here but requests will apear in Scope
  */
 
 import UIKit
