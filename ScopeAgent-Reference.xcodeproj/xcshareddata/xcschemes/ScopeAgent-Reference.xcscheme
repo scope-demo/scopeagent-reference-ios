@@ -27,18 +27,6 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "NO">
-      <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6624DB18228942F3005897D4"
-               BuildableName = "ScopeAgent-ReferenceTests.xctest"
-               BlueprintName = "ScopeAgent-ReferenceTests"
-               ReferencedContainer = "container:ScopeAgent-Reference.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-      </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
@@ -104,9 +92,29 @@
             value = "$(BUILD_URL)"
             isEnabled = "YES">
          </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "SCOPE_INSTRUMENTATION_HTTP_PAYLOADS"
+            value = "YES"
+            isEnabled = "NO">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "SCOPE_SET_GLOBAL_TRACER"
+            value = "YES"
+            isEnabled = "YES">
+         </EnvironmentVariable>
       </EnvironmentVariables>
-      <AdditionalOptions>
-      </AdditionalOptions>
+      <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6624DB18228942F3005897D4"
+               BuildableName = "ScopeAgent-ReferenceTests.xctest"
+               BlueprintName = "ScopeAgent-ReferenceTests"
+               ReferencedContainer = "container:ScopeAgent-Reference.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -128,8 +136,6 @@
             ReferencedContainer = "container:ScopeAgent-Reference.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

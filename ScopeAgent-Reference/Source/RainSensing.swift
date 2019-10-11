@@ -10,7 +10,9 @@
  *
  * RainSensing and Wipers classes are internal application classes.
  * They are using custom tracing using OpenTracing library.
- * ScopeAgent is not imported here but Scope integrates Opentracing and their Spans will be shown in Scope.
+ * ScopeAgent is not imported here but Scope integrates Opentracing, if we configure Scope
+ * as the OpenTracing global tracer these Spans will be shown in Scope.
+ * This project does it with Test environment variable: SCOPE_SET_GLOBAL_TRACER = YES
  */
 
 import Foundation
