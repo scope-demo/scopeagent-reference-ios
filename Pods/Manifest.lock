@@ -1,7 +1,7 @@
 PODS:
   - Alamofire (4.9.1)
   - opentracing (0.5.1)
-  - ScopeAgent (0.3.3)
+  - ScopeAgent (0.4.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
@@ -17,7 +17,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   opentracing: f21afebfecbcc50a3fd367a6b30331f0bd094e29
-  ScopeAgent: 687ddeaf002eb33ff249da2a027e22e1f4c3366a
+  ScopeAgent: bb11821e0afc657b630cf860572dee6123d8fa80
 
 PODFILE CHECKSUM: f094f25a48f8bc3e9bdaf9bb75aea015c625864b
 

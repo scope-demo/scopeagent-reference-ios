@@ -1,22 +1,45 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-apikey="${SCOPE_APIKEY}"
+regex="https?:\/\/([^@]+)@(.+)"
+
+if [[ $SCOPE_DSN =~ $regex ]]; then
+  dsnapikey="${BASH_REMATCH[1]}"
+  dsnapiendpoint="https://${BASH_REMATCH[2]}"
+fi
+
+if [[ $SCOPE_XCODE_DSN =~ $regex ]]; then
+  xcodedsnapikey="${BASH_REMATCH[1]}"
+  xcodedsnapiendpoint="https://${BASH_REMATCH[2]}"
+fi
+
+apikey="${dsnapikey}"
 if [ -z "${apikey}" ]; then
-  apikey="${SCOPE_XCODE_APIKEY}"
+  apikey="${SCOPE_APIKEY}"
   if [ -z "${apikey}" ]; then
-    echo "No \$SCOPE_APIKEY or \$SCOPE_XCODE_APIKEY detected - skipping symbol file upload to Scope"
-    exit 0
+    apikey="${xcodedsnapikey}"
+    if [ -z "${apikey}" ]; then
+      apikey="${SCOPE_XCODE_APIKEY}"
+      if [ -z "${apikey}" ]; then
+        echo "No \$SCOPE_APIKEY or \$SCOPE_XCODE_APIKEY detected - skipping symbol file upload to Scope"
+        exit 0
+      fi
+    fi
   fi
 fi
 
 echo "APIKEY = ${apikey}"
 
-apiendpoint="${SCOPE_API_ENDPOINT}"
+apiendpoint="${dsnapiendpoint}"
 if [ -z "${apiendpoint}" ]; then
-  apiendpoint="${SCOPE_XCODE_API_ENDPOINT}"
-  if [ -z "${apiendpoint}"  ]; then
-    echo "No \$SCOPE_API_ENDPOINT or \$SCOPE_XCODE_API_ENDPOINT detected - skipping symbol file upload to Scope"
-    exit 0
+  apiendpoint="${SCOPE_API_ENDPOINT}"
+  if [ -z "${apiendpoint}" ]; then
+    apiendpoint="${SCOPE_XCODE_API_ENDPOINT}"
+    if [ -z "${apiendpoint}"  ]; then
+      apiendpoint="${xcodedsnapiendpoint}"
+      if [ -z "${apiendpoint}"  ]; then
+        apiendpoint="https://app.scope.dev"
+      fi
+    fi
   fi
 fi
 
