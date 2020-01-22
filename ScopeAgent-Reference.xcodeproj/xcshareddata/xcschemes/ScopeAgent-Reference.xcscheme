@@ -33,7 +33,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "${PODS_ROOT}/ScopeAgent/ScopeAgent.framework/scope-coverage&#10;">
+               scriptText = "${PODS_ROOT}/ScopeAgent/ios/ScopeAgent.framework/scope-coverage&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
@@ -57,58 +57,28 @@
       </MacroExpansion>
       <EnvironmentVariables>
          <EnvironmentVariable
-            key = "SCOPE_APIKEY"
-            value = "$(SCOPE_APIKEY)"
+            key = "SCOPE_DSN"
+            value = "$(SCOPE_DSN)"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
-            key = "SCOPE_API_ENDPOINT"
-            value = "$(SCOPE_API_ENDPOINT)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "SCOPE_XCODE_APIKEY"
-            value = "$(SCOPE_XCODE_APIKEY)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "SCOPE_XCODE_API_ENDPOINT"
-            value = "$(SCOPE_XCODE_API_ENDPOINT)"
+            key = "SCOPE_XCODE_DSN"
+            value = "$(SCOPE_XCODE_DSN)"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "SCOPE_COMMIT_SHA"
-            value = "$(GIT_COMMIT)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "SCOPE_REPOSITORY"
-            value = "$(GIT_URL)"
+            value = "$(GITHUB_SHA)"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "SCOPE_SOURCE_ROOT"
-            value = "$(WORKSPACE)"
+            value = "$(GITHUB_WORKSPACE)"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
-            key = "JENKINS_URL"
-            value = "$(JENKINS_URL)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "BUILD_ID"
-            value = "$(BUILD_ID)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "BUILD_NUMBER"
-            value = "$(BUILD_NUMBER)"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "BUILD_URL"
-            value = "$(BUILD_URL)"
+            key = "GITHUB_REPOSITORY"
+            value = "$(GITHUB_REPOSITORY)"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable

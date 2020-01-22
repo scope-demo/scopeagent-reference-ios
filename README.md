@@ -2,11 +2,12 @@
 
 ScopeAgent-Reference is the reference app to showcase Scope integration and functionality in an iOS project. 
 
-It is configured as explained in [https://scope.undefinedlabs.com/docs/ios-installation](https://scope.undefinedlabs.com/docs/ios-installation) using:
+It is configured manually as explained in [https://scope.undefinedlabs.com/docs/ios-installation](https://scope.undefinedlabs.com/docs/ios-installation) using:
 
 - **Cocoapods**: *Podfile* explains pods and usage
-- **CircleCI**: See *Environment Variables* in test Scheme
+- **GitHub Actions **: See *Environment Variables* in test Scheme
 - **Upload symbols**: Check *Upload Symbols* in ScopeAgent-ReferenceTests *Build Phases* for crash symbolication
+- **CodePath**: Check *Post-actions* in ScopeAgent-Reference *Scheme* Test action.
 
 > ScopeAgent-Reference is written in Swift but ScopeAgent.framework can also be used from any project written in Objective-C.
 >

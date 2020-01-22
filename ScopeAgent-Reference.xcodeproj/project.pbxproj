@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -315,7 +315,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${PODS_ROOT}/ScopeAgent/ScopeAgent.framework/upload_symbols\n";
+			shellScript = "${PODS_ROOT}/ScopeAgent/ios/ScopeAgent.framework/upload_symbols\n";
 		};
 		D1A56F827DED5A78CEC83AD3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
