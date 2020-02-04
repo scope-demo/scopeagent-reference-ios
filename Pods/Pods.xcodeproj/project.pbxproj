@@ -903,23 +903,6 @@
 			};
 			name = Release;
 		};
-		96E906C3C1E953D07AB41ADEC63E2D83 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFCD77C1A00A3EA68F0B9A060F08DB0A /* ScopeAgent.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		9BF1096C1CC2182710EBC972A2F9C8B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9BBA59F53CE3E114E8C7417029A17539 /* Pods-ScopeAgent-Reference.release.xcconfig */;
@@ -958,6 +941,23 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		D8F49C88769C2F12AA6AA6820EE380F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFCD77C1A00A3EA68F0B9A060F08DB0A /* ScopeAgent.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		DD8F832993327D1DD8046C3CBCBD97CD /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1059,24 +1059,6 @@
 			};
 			name = Release;
 		};
-		EA1B3F078940DF324419C18B3B0BCBF1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFCD77C1A00A3EA68F0B9A060F08DB0A /* ScopeAgent.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		F94FD07C591B17B7E61A1528AB9BCB3B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 53DEA1FEEE25FA97FEBB2DF28AFC8924 /* Alamofire.xcconfig */;
@@ -1113,6 +1095,24 @@
 			};
 			name = Release;
 		};
+		FFA2F6E3BA6AD4B60834296574585988 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFCD77C1A00A3EA68F0B9A060F08DB0A /* ScopeAgent.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1137,8 +1137,8 @@
 		8ED5F26E591D24C9D3D245C91E1948DD /* Build configuration list for PBXAggregateTarget "ScopeAgent" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				96E906C3C1E953D07AB41ADEC63E2D83 /* Debug */,
-				EA1B3F078940DF324419C18B3B0BCBF1 /* Release */,
+				D8F49C88769C2F12AA6AA6820EE380F5 /* Debug */,
+				FFA2F6E3BA6AD4B60834296574585988 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
