@@ -20,7 +20,7 @@ if [ -z "${apikey}" ]; then
     if [ -z "${apikey}" ]; then
       apikey="${SCOPE_XCODE_APIKEY}"
       if [ -z "${apikey}" ]; then
-        echo "No \$SCOPE_APIKEY or \$SCOPE_XCODE_APIKEY detected - skipping symbol file upload to Scope"
+        echo "[Scope] [upload_symbols] No \$SCOPE_APIKEY or \$SCOPE_XCODE_APIKEY detected - skipping symbol file upload to Scope"
         exit 0
       fi
     fi
@@ -41,10 +41,10 @@ if [ -z "${apiendpoint}" ]; then
   fi
 fi
 
-searchdir=${TARGET_BUILD_DIR}
+searchdir=${CONFIGURATION_BUILD_DIR}
 
 if [ -z "$(find ${searchdir} -name '*.dSYM')" ]; then
-  echo "No .dSYM files found in ${searchdir} - skipping symbol file upload to Scope"
+  echo "[Scope] [upload_symbols] No .dSYM files found in ${searchdir} - skipping symbol file upload to Scope"
   exit 0
 fi
 
@@ -55,9 +55,9 @@ find ${searchdir} -name "*.dSYM" | zip -q -@ -r ${tmpfile}
 echo "Uploading .dSYM files to ${apiendpoint}"
 curl -Ssf --retry 4 --retry-delay 5 -F "file=@${tmpfile};type=application/zip" -H "X-Scope-ApiKey: ${apikey}" ${apiendpoint}/api/agent/upload
 if [ $? != 0 ]; then
-  echo "Something failed when uploading .dSYM files to ${apiendpoint}"
+  echo "[Scope] [upload_symbols] Something failed when uploading .dSYM files to ${apiendpoint}"
 else
-  echo "Symbol files successfully uploaded to ${apiendpoint}"
+  echo "[Scope] [upload_symbols] .dSYM files successfully uploaded to ${apiendpoint}"
 fi
 
 rm -r ${tmpdir}
